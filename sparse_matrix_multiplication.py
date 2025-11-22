@@ -6,9 +6,6 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 
-# CLASE MATRIZ DISPERSA
-# ============================================
-
 class MatrizSparse:
     """Matriz dispersa - solo guarda elementos != 0"""
     
@@ -36,10 +33,6 @@ class MatrizSparse:
         return (1 - no_ceros/total) * 100
 
 
-# ============================================
-# CREAR MATRICES DISPERSAS
-# ============================================
-
 def crear_sparse_random(n, sparsity):
     """
     Crea matriz dispersa aleatoria
@@ -61,10 +54,6 @@ def crear_sparse_random(n, sparsity):
     
     return matriz
 
-
-# ============================================
-# MULTIPLICAR MATRICES DISPERSAS
-# ============================================
 
 def multiplicar_sparse(A, B):
     """Multiplica dos matrices dispersas"""
@@ -101,9 +90,6 @@ def multiplicar_denso(A, B):
     return C
 
 
-# ============================================
-# PROBAR DIFERENTES NIVELES DE SPARSITY
-# ============================================
 
 def probar_sparsity(n, sparsity):
     """Prueba un nivel de sparsity"""
@@ -175,9 +161,6 @@ def comparar_sparsity_levels(n):
     return resultados
 
 
-# ============================================
-# COMPARAR SPARSE VS DENSO
-# ============================================
 
 def comparar_sparse_vs_denso(n, sparsity):
     """Compara sparse vs denso"""
@@ -242,9 +225,6 @@ def comparar_sparse_vs_denso(n, sparsity):
     }
 
 
-# ============================================
-# GENERAR GRÁFICAS
-# ============================================
 
 def generar_graficas(resultados_sparsity, resultado_comparacion):
     """Genera gráficas de matrices dispersas"""
@@ -334,9 +314,6 @@ def generar_graficas(resultados_sparsity, resultado_comparacion):
     plt.show()
 
 
-# ============================================
-# EJECUTAR
-# ============================================
 
 if __name__ == "__main__":
     print("="*80)
@@ -377,4 +354,5 @@ if __name__ == "__main__":
     generar_graficas(resultados_sparsity, resultado_comparacion)
     
     print("\n✓ COMPLETADO")
+
     print("="*80)
