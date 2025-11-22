@@ -6,9 +6,6 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 
-
-
-
 def crear_matriz(n, valor=1.0):
     """Crea una matriz n×n llena con un valor"""
     return [[valor for _ in range(n)] for _ in range(n)]
@@ -234,3 +231,4 @@ if __name__ == "__main__":
     print("\n✓ COMPLETADO")
 
     print("="*80)
+
