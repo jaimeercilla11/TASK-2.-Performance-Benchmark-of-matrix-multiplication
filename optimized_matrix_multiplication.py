@@ -7,9 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-# ============================================
-# CREAR MATRICES
-# ============================================
+
 
 def crear_matriz(n, valor=1.0):
     """Crea una matriz n×n llena con un valor"""
@@ -20,9 +18,6 @@ def crear_matriz_random(n):
     return [[random.uniform(1, 10) for _ in range(n)] for _ in range(n)]
 
 
-# ============================================
-# ALGORITMOS DE MULTIPLICACIÓN
-# ============================================
 
 def multiplicar_basico(A, B):
     """Método básico - Orden ijk"""
@@ -69,9 +64,7 @@ def multiplicar_bloques(A, B, block_size=32):
     return C
 
 
-# ============================================
-# MEDIR TIEMPO, MEMORIA Y CPU
-# ============================================
+
 
 def medir_tiempo(funcion, A, B, nombre):
     """Mide tiempo, memoria y CPU"""
@@ -101,9 +94,6 @@ def medir_tiempo(funcion, A, B, nombre):
     return tiempo, memoria_mb, cpu_promedio
 
 
-# ============================================
-# COMPARAR TODOS LOS MÉTODOS
-# ============================================
 
 def comparar_metodos(tamaño):
     """Compara todos los métodos"""
@@ -133,10 +123,6 @@ def comparar_metodos(tamaño):
         'bloques': {'tiempo': t3, 'memoria': m3, 'cpu': c3}
     }
 
-
-# ============================================
-# GENERAR GRÁFICAS
-# ============================================
 
 def generar_graficas(todos_resultados):
     """Genera gráficas de los resultados"""
@@ -198,9 +184,6 @@ def generar_graficas(todos_resultados):
     plt.show()
 
 
-# ============================================
-# EJECUTAR
-# ============================================
 
 if __name__ == "__main__":
     print("="*80)
@@ -249,4 +232,5 @@ if __name__ == "__main__":
         generar_graficas(todos_resultados)
     
     print("\n✓ COMPLETADO")
+
     print("="*80)
